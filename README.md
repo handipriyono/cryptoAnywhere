@@ -12,3 +12,7 @@ To run this app locally using Expo, follow these steps:
 ### VPN Requirement
 
 Please note that this app utilizes the Binance API, so a VPN connection is required for it to function properly. You can use VPN connection provided by Cloudflare ( 1111 ). Ensure your VPN connection is active before using the app.
+
+<video width="320" height="auto" controls>
+  <source src="https://s3.us-west-2.amazonaws.com/cdn.handi.dev/cryptos.mp4" type="video/mp4">
+</video>
