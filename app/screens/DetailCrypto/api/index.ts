@@ -6,7 +6,7 @@ export const getCandleHistory = ({
   symbol,
 }: TParamCandleHistory) => {
   return fetch(
-    `https://www.binance.com/api/v3/klines?symbol=${symbol}&interval=${interval}&limit=${limit}`
+    `https://api.binance.com/api/v3/klines?symbol=${symbol}&interval=${interval}&limit=${limit}`
   )
     .then((response) => response.json())
     .then((json) => {
