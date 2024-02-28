@@ -21,7 +21,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.newanywhere.pintuanywhere"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -31,6 +32,6 @@
         "projectId": "26a87ea5-ecb4-48ea-960a-37facd04456e"
       }
     },
-    "owner": "handimacbook123"
+    "owner": "newanywhere"
   }
 }

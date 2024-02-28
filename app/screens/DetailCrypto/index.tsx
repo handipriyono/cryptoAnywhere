@@ -21,6 +21,7 @@ const DetailCrypto = () => {
 
   return (
     <SafeAreaView style={{ flex: 1, paddingBottom: 100 }}>
+      <StatusBar style="auto" />
       <HeaderBack />
       <ScrollView showsVerticalScrollIndicator={false}>
         <GestureHandlerRootView style={{ position: "relative" }}>
@@ -29,7 +30,6 @@ const DetailCrypto = () => {
             showPrice={showPrice}
             onSetShowPrice={onSetShowPrice}
           />
-          <StatusBar style="auto" />
         </GestureHandlerRootView>
         <OrderBook />
       </ScrollView>
