@@ -14,8 +14,11 @@ const defaultItem: TKlineItem = {
 
 const useGetKline = () => {
   const [klineItems, setKlineItems] = useState<Array<TKlineItem>>([]);
-  const { selectedSymbol } = useGetCryptoDetailStore(
-    useShallow((state) => ({ selectedSymbol: state.selectedSymbol }))
+  const { selectedSymbol, timeRangeSelected } = useGetCryptoDetailStore(
+    useShallow((state) => ({
+      selectedSymbol: state.selectedSymbol,
+      timeRangeSelected: state.timeRangeSelected,
+    }))
   );
 
   const getHistory = async () => {
@@ -23,8 +26,12 @@ const useGetKline = () => {
       const dataResult = await getCandleHistory({
         symbol: selectedSymbol,
         limit: 37,
-        interval: "1m",
+        interval: timeRangeSelected,
       });
+      if (!dataResult) {
+        throw new Error("Data not found");
+      }
+
       const final = (dataResult || [])?.map((item: any) => {
         return {
           timestamp: item?.[0],
@@ -36,14 +43,14 @@ const useGetKline = () => {
       });
       setKlineItems(final || [defaultItem]);
     } catch (error) {
-      console.log("onerrror", error);
+      console.log("error", error);
       setKlineItems([defaultItem]);
     }
   };
 
   useEffect(() => {
     getHistory();
-  }, []);
+  }, [timeRangeSelected, selectedSymbol]);
 
   return {
     data: klineItems,

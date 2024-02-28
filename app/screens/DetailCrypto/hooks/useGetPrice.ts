@@ -18,7 +18,7 @@ const useGetPrice = () => {
       )?.toLowerCase()}@ticker`
     );
     ws.onopen = () => {
-      console.log("onopen");
+      // console.log("onopen");
     };
     ws.onmessage = (e) => {
       const item = JSON.parse(e?.data);
