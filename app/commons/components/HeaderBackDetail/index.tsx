@@ -15,9 +15,7 @@ const HeaderBack = () => {
           </TouchableOpacity>
         </View>
         <View>
-          <Text style={{ fontWeight: "bold" }}>
-            {selectedSymbol} Token Price
-          </Text>
+          <Text style={{ fontWeight: "bold" }}>{selectedSymbol} Price</Text>
         </View>
         <View>
           <TouchableOpacity>
