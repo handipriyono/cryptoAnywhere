@@ -4,7 +4,7 @@ import CandleStickChart from "./components/CandleChart";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import useGetKline from "./hooks/useGetKline";
 import { SafeAreaView, ScrollView } from "react-native";
-import HeaderBack from "../../Commons/Components/HeaderBackDetail";
+import HeaderBack from "../../commons/components/HeaderBackDetail";
 import OrderBook from "./components/OrderBook";
 import FooterActionDetail from "./components/FooterAction";
 
