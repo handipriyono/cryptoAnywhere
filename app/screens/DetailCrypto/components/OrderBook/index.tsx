@@ -15,7 +15,7 @@ const OrderBook = () => {
   const { orderBookList } = useGetOrderBook();
 
   return (
-    <View style={{ marginBottom: 120, marginTop: 50 }}>
+    <View style={{ marginBottom: 120, marginTop: 30 }}>
       <View style={[Styles.headerBox]}>
         <View style={Styles.rowBox}>
           <Text>Size</Text>

@@ -1,9 +1,10 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { CandlestickChart } from "react-native-wagmi-charts";
 import PriceInfoBar from "../PriceInfoBar";
-import { View } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import * as haptics from "expo-haptics";
 import { TCandleStickChartComponent } from "../../types";
+import BarTime from "../BarTime";
 import Styles from "./style";
 
 const CandleStickChart = ({
@@ -37,6 +38,7 @@ const CandleStickChart = ({
           </CandlestickChart>
         </CandlestickChart.Provider>
       </View>
+      <BarTime />
     </GestureHandlerRootView>
   );
 };
